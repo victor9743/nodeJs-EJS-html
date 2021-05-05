@@ -1,0 +1,38 @@
+<html>
+
+    <!-- para incluir outro arquivo no ejs-->
+    <%- include('../partes/head'); %>
+
+    <body>
+
+    <!-- header -->
+    <%- include('../partes/header'); %>
+      <main class="p-5 jumbotron container">
+            <h1 class="display-4">Node com EJS</h1>
+            <p class="text-success">Vamos aprender a trabalhar com arquivos EJS</p>
+        </main>
+
+        
+         
+                <h2 class="display-4" ><%= msg %></h2>
+
+           
+        
+        <ul>
+            <% valores.forEach(function(valor){ %>
+                <li>
+                    <strong class="mr-1"> <%= valor.title %></strong> <%= valor.message %>
+                </li>
+        
+
+            <% }) %>
+          
+
+        </ul>
+
+    <!-- footer -->
+    <%- include('../partes/footer'); %>
+ </body>
+</html>
+<!-- npm i ejs -> instalar ejs -->
+<!-- npm i express -> instalar express servidor-->
